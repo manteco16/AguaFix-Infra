@@ -1,0 +1,37 @@
+# Copia este archivo como terraform.tfvars y completa los valores reales.
+# terraform.tfvars está en .gitignore y NUNCA debe subirse al repositorio.
+
+aws_region  = "us-east-1"
+project_name = "aguafix"
+environment  = "prod"
+
+instance_type        = "t3.micro"
+key_name             = "aguafix-key"
+public_key_path      = "~/.ssh/aguafix.pub"
+ssh_private_key_path = "~/.ssh/aguafix"
+ssh_allowed_cidr     = "0.0.0.0/0"
+
+# Docker Hub
+docker_user = "tu-usuario-dockerhub"
+api_image   = "" # vacío = tu-usuario-dockerhub/aguafix-api:latest
+bucket_name = "" # vacío = aguafix-<account-id>-images
+
+# Base de datos
+db_name     = "aguafix"
+db_user     = "aguafix"
+db_password = "CAMBIA_ESTA_PASSWORD"
+
+# Correo
+mailer_service  = "gmail"
+mailer_user     = "tu_correo@gmail.com"
+mailer_password = "tu_password_de_aplicacion"
+mailer_to       = "destino@ejemplo.com"
+mapbox_token    = ""
+
+# No-IP (crear el hostname primero en noip.com)
+noip_username = "tu_usuario_noip"
+noip_password = "tu_password_noip"
+noip_hostname = "aguafix-equipo1.ddns.net"
+
+# CORS (vacío = permitir todos)
+cors_origins = ""
