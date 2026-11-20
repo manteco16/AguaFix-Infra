@@ -119,7 +119,8 @@ NGINX
 
 ln -sf /etc/nginx/sites-available/aguafix /etc/nginx/sites-enabled/aguafix
 nginx -t
-systemctl enable --now nginx
+systemctl enable nginx
+systemctl reload-or-restart nginx
 
 # ---------------------------------------------------------------------------
 # No-IP: actualiza el hostname con la IP publica de la instancia
